@@ -13,4 +13,5 @@ const authRouter = require("./src/routes/auth");
 app.use("/auth", authRouter);
 
 // Export the Express app as a 2nd Gen Cloud Function
-exports.api = onRequest(app);
+//exports.api = onRequest(app);
+exports.api = onRequest({ cors: true }, app);
